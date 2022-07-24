@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="/newTodo" method="POST">
+            <div class="card-hover-shadow-2x mb-3 card">
+                <div class="card-header-tab card-header">
+                    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">Todo Ekle</div>
+                </div>
+                <div class="scroll-area-sm">
+                    <perfect-scrollbar class="ps-show-limits">
+                        <div style="position: static;" class="ps ps--active-y">
+                            <div class="p-4 ps-content">
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Todo Konusu</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="todoKonu" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Todo Açıklama</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="todoAciklama" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Öncelik Derecesi</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" name="todoOncelik">
+                                            <option>Normal</option>
+                                            <option>Acil</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Bitiş Tarihi</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="todoBitis" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </perfect-scrollbar>
+                </div>
+                <div class="d-block text-right card-footer">
+                    <a href="/" class="mr-2 btn btn-link btn-sm">Geri Dön</a>
+                    <button class="btn btn-primary">Kaydet</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

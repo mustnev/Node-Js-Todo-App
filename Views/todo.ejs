@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card-hover-shadow-2x mb-3 card">
+                <div class="card-header-tab card-header">
+                    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">Todo Listesi</div>
+                </div>
+                <div class="scroll-area-sm">
+                    <perfect-scrollbar class="ps-show-limits">
+                        <div style="position: static;" class="ps ps--active-y">
+                            <div class="ps-content">
+                                <ul class=" list-group list-group-flush">
+                                    <% data.forEach(element=> { %>
+                                        <li class="list-group-item">
+                                            <form action="/todoDelete/<%=element._id%>" method="post">
+                                                <div class="todo-indicator bg-success"></div>
+                                                <div class="widget-content p-0">
+                                                    <div class="widget-content-wrapper">
+                                                        <div class="ml-4 widget-content-left flex2"
+                                                            style="min-width:190px;">
+                                                            <div class="widget-heading">Todo Konu :
+                                                                <%=element.todoKonu%><br></div>
+                                                            <div class="widget-subheading">Todo Açıklama :
+                                                                <%=element.todoAciklama%><br></div>
+                                                        </div>
+                                                        <div class="ml-2 widget-content-left flex2">
+                                                            <div class="widget-heading">Öncelik :
+                                                                <%=element.todoOncelik%><br></div>
+                                                        </div>
+                                                        <div class="ml-2 widget-content-left flex2">
+                                                            <div class="widget-heading">Bitiş Zamanı :
+                                                                <%=element.todoBitis%><br></div>
+                                                        </div>
+                                                        <div class="widget-content-right">
+                                                            <button
+                                                                class="border-0 btn-transition btn btn-outline-success">
+                                                                Tamamla</button>
+                                                            <button
+                                                                class="border-0 btn-transition btn btn-outline-danger">
+                                                                Kaldır
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                        <%}) %>
+                                            <li class="list-group-item">
+                                                <div class="todo-indicator bg-primary"></div>
+                                                <div class="widget-content p-0">
+                                                    <div class="widget-content-wrapper">
+                                                        <div class="ml-4 widget-content-left flex2">
+                                                            <div class="widget-heading">Ask for Lunch to Clients</div>
+                                                            <div class="widget-subheading">By Office Admin</div>
+                                                        </div>
+                                                        <div class="widget-content-right">
+                                                            <button
+                                                                class="border-0 btn-transition btn btn-outline-success">
+                                                                Tamamla</button>
+                                                            <button
+                                                                class="border-0 btn-transition btn btn-outline-danger">
+                                                                Kaldır
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </perfect-scrollbar>
+                </div>
+                <div class="d-block text-right card-footer">
+                    <a href="/newTodo" class="btn btn-primary">Todo Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

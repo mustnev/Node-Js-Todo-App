@@ -2,9 +2,9 @@
 Node js ile geliştirdiğim ilk proje 
 
 Kullandığım paketler
--express js
+-express
 -ejs
--monggose
+-mongoose
 -body-parser
 -express-ejs-layouts
 -nodemon
